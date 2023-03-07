@@ -7,8 +7,8 @@ export default function NavBar() {
         <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
       </div>
       <div className="flex-none">
-        <div class="form-control">
-          <input id="Buscador" type="text" placeholder="Search" class="input input-bordered" />
+        <div className="form-control [ lg:visible ] [ md:visible ] [ hidden  ] ">
+          <input id="Buscador" type="text" placeholder="Search" className="input input-bordered" />
         </div>
         <ul className="menu menu-horizontal px-1">
           <li><Link to="/">Home</Link></li>

@@ -13,13 +13,22 @@ export function Carousel_Trend_now() {
 
     return (
         <>
-            <h1 className="[ text-lg  font-bold text-gray-400 ]">Trending Now</h1>
+            <h1 className="[ text-lg  font-bold text-gray-400 ]">En Tendencias</h1>
             <div className="  carousel carousel-end h-96 rounded-box ">
-                {Jsonmovie.map(item => <div key={item.id} className="carousel-item relative ">
-                    <img className=' w-52 duration-150 object-cover hover:w-96 transition-all' src={"https://image.tmdb.org/t/p/w500" + item.backdrop_path} alt="Drink" />
-                    <div className='[ absolute w-full flex justify-center bottom-2    ]'>{item.title}</div>
+                {Jsonmovie.map(item => {
+                    return typeof (item.name) == 'undefined' ?
+                        <div key={item.id} className="carousel-item relative ">
+                            <img className=' w-52 duration-150 object-cover hover:w-96 transition-all' src={"https://image.tmdb.org/t/p/w500" + item.backdrop_path} alt="Drink" />
+                            <div className='[ absolute w-full flex justify-center bottom-2 font-bold  text-primary   ]'>{item.title}</div>
+                        </div>
+                        :
+                        <div key={item.id} className="carousel-item relative ">
+                            <img className=' w-52 duration-150 object-cover hover:w-96 transition-all' src={"https://image.tmdb.org/t/p/w500" + item.backdrop_path} alt="Drink" />
+                            <div className='[ absolute w-full flex justify-center bottom-2 font-bold  text-primary  ]'>{item.name}</div>
+                        </div>
 
-                </div>)
+                }
+                )
                 }
             </div>
         </>);
