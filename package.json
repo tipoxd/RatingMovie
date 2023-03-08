@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "server": "npm run build && vite preview"
   },
   "dependencies": {
     "daisyui": "^2.51.2",
